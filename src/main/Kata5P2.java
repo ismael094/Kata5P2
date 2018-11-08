@@ -7,7 +7,7 @@ import model.Mail;
 import view.HistogramDisplay;
 import static view.MailHistogramBuilder.build;
 import static view.MailListReader.read;
-
+import static view.MailListReaderBD.read;
 
 public class Kata5P2 {
     
@@ -33,7 +33,7 @@ public class Kata5P2 {
     
     public void input() {
         try {
-           mailList = read(fileName); 
+           mailList = read(); 
         } catch (Exception e) {
             System.out.println("Ha ocurrido un error con el fichero");
         }
